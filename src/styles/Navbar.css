@@ -1,0 +1,12 @@
+.navbar {
+	border-bottom: 1px solid var(--color-primary);
+}
+
+.navbar a {
+	display: inline-block;
+	font-size: 3.4rem;
+	font-weight: bold;
+	padding: 3rem 0;
+	color: var(--font-color);
+	box-shadow: none;
+}

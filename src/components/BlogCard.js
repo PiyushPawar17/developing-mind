@@ -20,8 +20,8 @@ BlogCard.propTypes = {
 	slug: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	date: PropTypes.string.isRequired,
-	ttr: PropTypes.string.isRequired,
-	spoiler: PropTypes.string.isRequired
+	spoiler: PropTypes.string.isRequired,
+	ttr: PropTypes.number.isRequired
 };
 
 export default BlogCard;

@@ -1,7 +1,7 @@
 ---
 title: 'Understanding JavaScript Objects (Part 1)'
 date: '2020-01-19'
-spoiler: '"this" is confusing'
+spoiler: 'Overcoming the problem with "this"'
 ---
 
 JavaScript has grown a lot in past few years. It has found its applications in almost every field. Because of this many developers try to learn JavaScript. Some of them are beginners while some of them have already been working on other languages like Python, C#, Java, C++. These are all Object Oriented Languages. The concept of objects in these languages are pretty similar. But, in JavaScript, objects behave very differently. This is the reason developers from another language face a lot of issues while dealing with objects in JavaScript. Also, `this` is one of the main reasons developers face issues.

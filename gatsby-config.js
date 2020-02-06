@@ -45,11 +45,11 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Blog.js`,
-				short_name: `Blog.js`,
+				name: `Developing Mind`,
+				short_name: `Developing Mind`,
 				start_url: `/`,
-				background_color: `#282c35`,
-				theme_color: `#08a6e2`,
+				background_color: `#ffffff`,
+				theme_color: `#f53354`,
 				display: `minimal-ui`,
 				icon: `src/img/favicon.png` // This path is relative to the root of the site.
 			}

@@ -6,7 +6,7 @@ spoiler: '__proto__ vs prototype'
 
 We saw how the `new` keyword works under-the-hood and implemented it from scratch. We'll now see what is `__proto__` property present on objects and how it is different from `prototype`. The concepts are pretty simple so this won't take much time to read and understand.
 
-## What is \_\_proto\_\_?
+## What is `proto`?
 
 The `__proto__` property is present on objects. Let's start by creating a object and exploring the `__proto__` property.
 
@@ -65,7 +65,7 @@ weapon.level = 3;
 console.log(sword.__proto__); // { damage: 45, level: 3 }
 ```
 
-## What is prototype?
+## What is `prototype`?
 
 There's also thing called `prototype`. What does this do? The `prototype` property only exists on functions and is set as a property if `new` keyword is used. Let's see an example.
 

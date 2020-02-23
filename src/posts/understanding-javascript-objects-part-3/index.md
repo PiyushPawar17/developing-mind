@@ -6,7 +6,7 @@ spoiler: 'Applying "new" to functions and building it from scratch'
 
 Till now we've seen how to handle `this` using `bind` function and achieving inheritance through `prototype`. In this post, we'll look at the behaviour of `new` when applied to functions. We'll also implement the functionality of `new` to get better understanding of what is happening under-the-hood. We are not going to talk about `new` been applied to `class` as of now. We'll be using ES5 syntax as such codes will be mostly in ES5 in real world.
 
-## Applying "new" to functions
+## Applying `new` to functions
 
 ```js{9}
 function Weapon(damage) {
@@ -32,7 +32,7 @@ And you probably didn't understand anything 😕. It's difficult to visualize th
 
 The best way to understand what's going on will be to implement the functionality of `new` from scratch.
 
-## Implementing "new"
+## Implementing `new`
 
 Let's say there is no new keyword. We'll create our own new function. We've a `spawn` function that will act as our `new` keyword. The first step is to create a new empty object.
 

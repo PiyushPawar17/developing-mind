@@ -6,7 +6,7 @@ spoiler: 'Achieving Inheritance through Prototype'
 
 In the last part we saw how `this` can create a confusion and a way to handle it using `bind` function. In this post, we will be looking at `prototype`.
 
-## What is a prototype?
+## What is a `prototype`?
 
 In other object oriented programming languages, inheritance is done using a `class`. But in JavaScript, inheritance is achieved using `prototype`. In newer version of JavaScript we have a `class` keyword. So you might be thinking "Why am I learning this when there is already an easy way to do it?".
 

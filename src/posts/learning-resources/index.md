@@ -4,7 +4,7 @@ date: '2020-03-08'
 spoiler: 'Improve your web development skills'
 ---
 
-**"From where should I learn X?"** This is the question I get frequently asked by someone who is just getting into a new technology. And almost everytime the answer is same. Everytime I would go and find a link and share with them. So I decided to make this blog to share those links. Most of the links here would be related to Front-end development (in React) and few related to Node.js, MongoDB, UI/UX, general Front-end and Back-end development. The resources are mostly free to use🎉.
+**"From where should I learn X?"**. This is the question I get frequently asked by someone who is just getting into a new technology. And almost everytime the answer is same. Everytime I would go and find a link and share with them. So I decided to make this blog to share those links. Most of the links here would be related to Front-end development (in React) and few related to Node.js, MongoDB, UI/UX, general Front-end and Back-end development. The resources are mostly free to use🎉.
 
 _Note that these are the tutorials from where I learned something and I think are good to get going. You might find other tutorials that you think are better. Feel free to learn from them._
 

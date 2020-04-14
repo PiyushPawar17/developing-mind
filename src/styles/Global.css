@@ -62,15 +62,26 @@ h4 {
 
 p,
 li {
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 }
 
 p {
-	margin: 2rem 0;
+	margin: 3rem 0;
+}
+
+ul {
+	list-style-type: none;
 }
 
 li {
+	position: relative;
 	margin-bottom: 1rem;
+}
+
+li::before {
+	content: '\25AA';
+	color: var(--color-primary);
+	margin-right: 1rem;
 }
 
 img {

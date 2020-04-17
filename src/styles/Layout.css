@@ -1,6 +1,12 @@
 .layout {
-	max-width: 90rem;
+	max-width: 100rem;
 	margin: 0 auto;
+}
+
+@media screen and (max-width: 1250px) {
+	.layout {
+		max-width: 90rem;
+	}
 }
 
 @media screen and (max-width: 1000px) {

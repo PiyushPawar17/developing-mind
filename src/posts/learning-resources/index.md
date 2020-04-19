@@ -55,6 +55,7 @@ This section focuses on tools and concepts related to UI/UX development along wi
 -   [Flux](https://www.youtube.com/channel/UCN7dywl5wDxTu1RM3eJ_h9Q)
 -   [AJ&Smart](https://www.youtube.com/channel/UCeB_OpLspKJGiKv1CYkWFFw)
 -   [DesignCourse](https://www.youtube.com/user/DesignCourse)
+-   [Dansky](https://www.youtube.com/channel/UCAbq1eKey19tt-FfaIO1RMA)
 -   [Learn UX](https://learnux.io)
 
 # Talks

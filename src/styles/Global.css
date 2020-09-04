@@ -110,6 +110,8 @@ blockquote {
 	border-left: 3px solid var(--color-primary);
 	padding: 0.1rem 2rem;
 	background-color: #ffffff;
+	font-weight: bold;
+	font-style: italic;
 }
 
 blockquote p {

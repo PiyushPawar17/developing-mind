@@ -87,6 +87,7 @@ li::before {
 
 img {
 	box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.4);
+	max-width: 100%;
 }
 
 a {

@@ -29,7 +29,6 @@ const Container: React.FC<ContainerProps> = ({ children, title, description, typ
 				<meta name="title" content={meta.title} />
 				<meta name="description" content={meta.description} />
 
-				<link rel="canonical" href={`https://blog.piyushpawar.dev${router.asPath}`} />
 				<meta property="og:title" content={meta.title} />
 				<meta property="og:description" content={meta.description} />
 				<meta property="og:type" content={meta.type} />

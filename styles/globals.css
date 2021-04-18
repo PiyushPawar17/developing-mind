@@ -204,6 +204,18 @@ pre[data-line] {
 }
 
 /* Custom Styles */
+::-webkit-scrollbar-track {
+	@apply shadow bg-body;
+}
+
+::-webkit-scrollbar {
+	@apply w-2 md:w-3 bg-body;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-code rounded-full;
+}
+
 .blog-card:hover .blog-card__image,
 .blog-card:focus .blog-card__image {
 	transform: scale(1.05);

@@ -33,13 +33,16 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, frontMatter }) => {
 		>
 			<article>
 				<header className="my-4 md:my-6 lg:my-10">
-					<time dateTime={publishedAt} className="block text-xs md:text-xs text-center uppercase text-white">
+					<time
+						dateTime={publishedAt}
+						className="block text-xs md:text-xs text-center uppercase text-white opacity-70"
+					>
 						Published at {format(parseISO(publishedAt), 'MMMM dd, yyyy')}
 					</time>
 					<h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mt-4 lg:mt-6 mb-4">
 						{frontMatter.title}
 					</h1>
-					<p className="text-center text-white text-sm">
+					<p className="text-center text-white text-sm opacity-70">
 						{frontMatter.readingTime.text} <ViewCounter slug={frontMatter.slug} />
 					</p>
 				</header>

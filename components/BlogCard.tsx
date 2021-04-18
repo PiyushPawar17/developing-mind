@@ -30,7 +30,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ slug, title, subtitle, readingTime,
 					})}
 				>
 					<small
-						className={clsx('block opacity-80', {
+						className={clsx('block opacity-70', {
 							'text-sm md:text-xs lg:text-sm mb-3': isFeatured,
 							'text-sm sm:text-xs mb-2': !isFeatured
 						})}
@@ -46,7 +46,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ slug, title, subtitle, readingTime,
 						{title}
 					</h3>
 					<p
-						className={clsx('overflow-hidden overflow-ellipsis whitespace-nowrap', {
+						className={clsx(' opacity-70', {
 							'text-base md:text-sm lg:text-base': isFeatured,
 							'text-sm sm:text-xs md:text-sm': !isFeatured
 						})}

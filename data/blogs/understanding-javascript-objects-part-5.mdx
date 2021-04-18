@@ -1,0 +1,115 @@
+---
+title: 'Understanding JavaScript Objects (Part 5)'
+subtitle: 'Object.create() - A new way to create objects'
+publishedAt: '2020-02-23'
+---
+
+Till now we learned various things about objects, how they're created and how tey behave. In this post, we'll see the `Object.create()` function which is a new way to create objects.
+
+## Exploring `Object.create()`
+
+The `Object.create()` function creates a new object with the prototype set to certain object. This might not be easiest thing to understand if you haven't read the previous posts. Let's see an example to get a better overview.
+
+```js
+const weapon = {
+	hit: function () {
+		console.log(this.damage);
+	}
+};
+
+const sword = Object.create(weapon);
+sword.damage = 24;
+sword.hit(); // 24
+```
+
+Here, we create an object with a `hit` method in it. The `hit` method just prints out the damage property. The `Object.create()` will create a new object and set the prototype of that object to be weapon. Then, we add the damage property to the `sword` object which is later printed by calling the `hit` method. We can verify that the `weapon` object is prototype of `sword`.
+
+```js{11}
+const weapon = {
+	hit: function() {
+		console.log(this.damage);
+	}
+};
+
+const sword = Object.create(weapon);
+sword.damage = 24;
+sword.hit(); // 24
+
+console.log(weapon.isPrototypeOf(sword)); // true
+```
+
+The `isPrototypeOf` function returns `true` for the above condition. Meaning that `sword` inherits some properties from `weapon`.
+
+## Implementing `Object.create()`
+
+From the sort of definition given earlier, `Object.create()` is fairly easy to implement.
+
+```js{7-12}
+const weapon = {
+	hit: function() {
+		console.log(this.damage);
+	}
+};
+
+function objectCreate(proto) {
+	const obj = {};
+	// Bad performance
+	Object.setPrototypeOf(obj, proto);
+	return obj;
+}
+
+const sword = Object.create(weapon);
+sword.damage = 24;
+sword.hit(); // 24
+
+console.log(weapon.isPrototypeOf(sword)); // true
+```
+
+The `Object.create()` function creates a new object, same as the `new` keyword does, and sets the prototype of that new object to given object and returns it. This is not the best implementation of `Object.create()` as the `setPrototypeOf()` function has performance issues. Better use `Object.create()` to create one.
+
+The problem with `Object.create()` is it does not have a constructor function that would run as soon as the object is created. People usually add a method in the object and use it as a constructor.
+
+```js{2-4}
+const weapon = {
+	init: function(damage) {
+		this.damage = damage;
+	},
+	hit: function() {
+		console.log(this.damage);
+	}
+};
+
+const sword = Object.create(weapon);
+sword.init(24);
+sword.hit(); // 24
+
+console.log(weapon.isPrototypeOf(sword)); // true
+```
+
+For example, `init()` method is used as a constructor and is called immediately after using `Object.create()`. One handy thing to do is return `this` from the function used as constructor to chain another method.
+
+```js{4,11}
+const weapon = {
+	init: function(damage) {
+		this.damage = damage;
+		return this;
+	},
+	hit: function() {
+		console.log(this.damage);
+	}
+};
+
+const sword = Object.create(weapon).init(24);
+sword.hit(); // 24
+
+console.log(weapon.isPrototypeOf(sword));
+```
+
+Returning `this` will return the current object after which the `init` method can be chained to initialize the values.
+
+## Summary
+
+-   The `Object.create()` function creates a new object with the prototype set to certain object.
+-   The `Object.create()` does not have constructor that can be used to run some code just as the object is created.
+
+_Note: This series is heavily inspired by [Fun Fun Function's series on Object creation](https://www.youtube.com/playlist?list=PL0zVEGEvSaeHBZFy6Q8731rcwk0Gtuxub). The series may give you more insights as it has live coding examples._

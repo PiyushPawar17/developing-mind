@@ -1,0 +1,55 @@
+---
+title: 'Using void to implicitly return nothing'
+subtitle: 'A trick with not so commonly used keyword'
+publishedAt: '2020-09-10'
+---
+
+People coming from statically typed programming languages like C++, C# or Java must have heard of the `void` keyword. When added as a return type of function, it signifies that the function returns nothing. The TypeScript developers must also have seen this when the types are defined. But, many of the JavaScript developers are unaware of the word. And why would they be concerned about `void`? It just returns `undefined`.
+
+The [function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function) implicitly returns `undefined` if there is no return statement in the function. The [function expression](https://developer.mozilla.org/en-US/docs/web/JavaScript/Reference/Operators/function) also does the same if it has a function body, or to be more clear function with `{}` around it. When written in single line though, it returns what the expression - or the function body - returns. What if you want to return nothing from the function, but the code is of just one line. You wrap it in `{}`. As simple as that.
+
+There's another way to do the same without wrapping the function with `{}`. It might not be very useful. You might stick with the same way by adding `{}` and its perfectly fine. This is just for some fun.
+
+## The `void` keyword
+
+Let's say you have a class where you increment and decrement a number. You just change the value of the variable and you don't need to return anything. You write two arrow functions to do so.
+
+```js{4,6}
+class Counter {
+	number = 0;
+
+	increment = () => ++this.number; // returns previous number + 1
+
+	decrement = () => --this.number; // returns previous number + 1
+}
+```
+
+As the two functions are in one line, it would return the updated number. What if you don't want to do so. Well, you just add the `void` keyword in front of it.
+
+```js{4,6}
+class Counter {
+	number = 0;
+
+	increment = () => void ++this.number; // returns undefined
+
+	decrement = () => void --this.number; // returns undefined
+}
+```
+
+You can try doing `2 + 2` in the browser console - not in any function, just type `2 + 2`. When you hit enter, you see the value returned is `4`. Now try doing `void (2 + 2)`, it will return `undefined`. One thing to remember is if you try `void 2 + 2`, the compiler will think that you are adding `void 2` and `2`, which will result in `NaN`. So be careful with this.
+
+## A use case
+
+Well that's fine. But are there other use cases you might ask. You might be using React's `useEffect` hook to do different things. If you are using some code that does not return a `function` or `undefined` in `useEffect` hook, it will yell at you for doing so. For example, if you are using `setInterval` in `useEffect` using single line arrow function, React will throw an error as `setInterval` returns a number and `useEffect` is not expecting that. You can get over it by just putting `void` in front of it.
+
+```js
+// Throws error
+useEffect(() => setInterval(() => {}, 1000), []);
+
+// Works fine
+useEffect(() => void setInterval(() => {}, 1000), []);
+```
+
+## Conclusion
+
+This is something not many people know. I might not even use this myself because adding code in future might have to require to undo the changes and write it the way we all have been writing. But, as I said, this is something that I discovered and thought was fun.

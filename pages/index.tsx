@@ -40,6 +40,10 @@ export const getStaticProps: GetStaticProps = async () => {
 	const blogs = await getAllFilesFrontMatter();
 
 	return {
+		redirect: {
+			destination: 'https://www.piyushpawar.dev/blog',
+			permanent: true
+		},
 		props: {
 			blogs
 		}

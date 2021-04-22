@@ -1,3 +1,7 @@
+# Update (Archived)
+
+The blog has been moved to my personal website. Check the repo [here](https://github.com/PiyushPawar17/website). This repo can be used for reference.
+
 # Developing Mind
 
 This is the second iteration of my blog with new design.

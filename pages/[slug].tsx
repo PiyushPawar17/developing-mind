@@ -39,11 +39,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const post = await getFileBySlug(params!.slug as string);
 
 	return {
-		props: post,
-		redirect: {
-			destination: `https://www.piyushpawar.dev/blog/${params!.slug}`,
-			permanent: true
-		}
+		props: post
 	};
 };
 

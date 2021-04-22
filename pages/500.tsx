@@ -16,6 +16,7 @@ const Custom500 = () => {
 				<p className="text-lg text-center my-8">
 					While the issue is fixed, have a look at my
 					<a
+						href="https://piyushpawar.dev/"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="mx-1 cursor-pointer text-primary outline-none hover:underline focus:underline"

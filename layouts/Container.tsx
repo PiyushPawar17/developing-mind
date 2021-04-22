@@ -16,7 +16,7 @@ const Container: React.FC<ContainerProps> = ({ children, title, description, typ
 
 	const meta = {
 		title: title ?? 'Developing Mind | A Blog by Piyush',
-		description: description ?? `A place where I try to teach what 've learned`,
+		description: description ?? `A place where I try to teach what I've learned`,
 		image: image ?? 'https://blog.piyushpawar.dev/logo512.png',
 		type: type ?? 'website',
 		date

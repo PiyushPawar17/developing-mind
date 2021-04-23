@@ -1,0 +1,14 @@
+{
+	"redirects": [
+		{
+			"source": "/",
+			"destination": "https://piyushpawar.dev/blog",
+			"permanent": true
+		},
+		{
+			"source": "/*",
+			"destination": "https://piyushpawar.dev/blog/*",
+			"permanent": true
+		}
+	]
+}

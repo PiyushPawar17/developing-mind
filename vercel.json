@@ -6,8 +6,8 @@
 			"permanent": true
 		},
 		{
-			"source": "/*",
-			"destination": "https://piyushpawar.dev/blog/*",
+			"source": "/:slug",
+			"destination": "https://piyushpawar.dev/blog/:slug",
 			"permanent": true
 		}
 	]
